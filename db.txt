@@ -1,0 +1,18 @@
+
+#c_user
+create user 'oelharbi'@'%' identified by 'usama123';
+	--> to see the users we use this (select user, host from mysql.user);
+
+#C_db 
+create database inception;
+
+#Give permissions
+grant all privileges on inception.* to 'oelharbi'@'%';
+
+flush privileges
+
+
+mariadb-admin -u root -p"usama" shutdown
+
+mariadbd-safe --port="3306" --bind="0.0.0.0" --data-dir="/run/mysqld/"
+
