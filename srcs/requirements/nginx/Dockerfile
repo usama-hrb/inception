@@ -8,7 +8,7 @@ RUN mkdir -p /etc/nginx/ssl
 
 
 	# 162 expensive encryption
-RUN echo  "MO\nOCP-STATE\nKHOURIBGA\n133SHIT\n133SHIT\noelharbi.42.fr\nsupport@gmail.com" > here_string.txt
+RUN echo  "MO\nOCP-STATE\nKHOURIBGA\n1337\n1337\noelharbi.42.fr\nsupport@gmail.com" > here_string.txt
 
 
 RUN openssl req -x509 -nodes -newkey rsa:4096 -keyout pk.key -out ssc.crt -days 162 <here_string.txt

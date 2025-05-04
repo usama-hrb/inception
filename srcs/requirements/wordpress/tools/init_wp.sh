@@ -16,7 +16,7 @@ sleep 5
 
 wp core config --dbname=$DB_NAME --dbuser=$DB_USER --dbpass=$DB_PASS --dbhost=mariadb:3306 --allow-root
 
-wp core install --url=$DOMAIN_NAME --title="HARBILI YA NOUR L3IN" --admin_user=$WP_ADMIN_USER --admin_password=$WP_ADMIN_PASS --admin_email=$WP_ADMIN_EMAIL  --allow-root
+wp core install --url=$DOMAIN_NAME --title="Inception" --admin_user=$WP_ADMIN_USER --admin_password=$WP_ADMIN_PASS --admin_email=$WP_ADMIN_EMAIL  --allow-root
 
 
 wp user create $WP_USER $WP_USER_MAIL --role=$WP_ROLE --allow-root
