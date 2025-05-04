@@ -4,12 +4,11 @@ up:
 	docker compose --file ./srcs/docker-compose.yml up --build
 
 down:
-	docker compose --file ./srcs/docker-compose.yml down
-	
-exec_it:
-	docker compose exec -it $(word 2, $(MAKECMDGOALS)) $(word 3, $(MAKECMDGOALS))
+	docker compose --file ./srcs/docker-compose.yml down -v
 
 fclean: down
-	@sudo rm -rf /home/oelharbi/data/*
+	@sudo rm -rf /home/oelharbi/data/*/*
 	@docker rmi $$(docker images -qa) -f
 	@docker system prune -a -f <<<"y"
+
+re: fclean up
