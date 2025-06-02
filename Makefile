@@ -1,7 +1,7 @@
 SHELL := /bin/bash
 
 up:
-	docker compose --file ./srcs/docker-compose.yml up --build
+	docker compose --file ./srcs/docker-compose.yml up --build -d
 
 down:
 	docker compose --file ./srcs/docker-compose.yml down -v
